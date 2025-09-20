@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西班牙 & 葡萄牙 | 2025 璀璨雙牙13日深度之旅 (最終版)</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; }
+        .timeline-item::before { content: ''; position: absolute; left: -1px; top: 2.25rem; bottom: -2.25rem; width: 2px; background-color: #e5e7eb; }
+        .timeline-item:last-child::before { display: none; }
+        .nav-link.active { color: #3b82f6; font-weight: 700; border-bottom: 2px solid #3b82f6; }
+        .mobile-nav-link.active { background-color: #eff6ff; color: #3b82f6; }
+        .checklist-item input:checked + span { text-decoration: line-through; color: #9ca3af; }
+        /* STYLES FOR DAY SELECTOR */
+        .day-link.active {
+            background-color: #3b82f6; /* bg-blue-500 */
+            color: white;
+            font-weight: 600;
+        }
+        .day-link:not(.active) {
+            background-color: #f3f4f6; /* bg-gray-100 */
+            color: #374151; /* text-gray-700 */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="text-xl font-bold text-gray-800"><a href="#">璀璨雙牙之旅</a></div>
+            <div class="hidden md:flex space-x-6 text-gray-600">
+                <a href="#" class="nav-link py-2" data-target="page-overview">行程總覽</a>
+                <a href="#" class="nav-link py-2" data-target="page-tickets">我的票券</a>
+                <a href="#" class="nav-link py-2" data-target="page-transport">交通住宿</a>
+                <a href="#" class="nav-link py-2" data-target="page-daily-itinerary">每日行程</a>
+                <a href="#" class="nav-link py-2" data-target="page-food-guide">美食地圖</a>
+                <a href="#" class="nav-link py-2" data-target="page-shopping-guide">必買紀念品</a>
+                <a href="#" class="nav-link py-2" data-target="page-preparation">行前準備</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden flex items-center"><span class="material-icons-sharp">menu</span></button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#" class="mobile-nav-link block text-center py-3 text-sm text-gray-700 hover:bg-gray-100" data-target="page-overview">行程總覽</a>
+            <a href="#" class="mobile-nav-link block text-center py-3 text-sm text-gray-700 hover:bg-gray-100" data-target="page-tickets">我的票券</a>
+            <a href="#" class="mobile-nav-link block text-center py-3 text-sm text-gray-700 hover:bg-gray-100" data-target="page-transport">交通住宿</a>
+            <a href="#" class="mobile-nav-link block text-center py-3 text-sm text-gray-700 hover:bg-gray-100" data-target="page-daily-itinerary">每日行程</a>
+            <a href="#" class="mobile-nav-link block text-center py-3 text-sm text-gray-700 hover:bg-gray-100" data-target="page-food-guide">美食地圖</a>
+            <a href="#" class="mobile-nav-link block text-center py-3 text-sm text-gray-700 hover:bg-gray-100" data-target="page-shopping-guide">必買紀念品</a>
+            <a href="#" class="mobile-nav-link block text-center py-3 text-sm text-gray-700 hover:bg-gray-100" data-target="page-preparation">行前準備</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="page-overview" class="page-content">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">西班牙 & 葡萄牙</h1>
+                <p class="text-lg text-gray-600">2025 璀璨雙牙13日深度客製化之旅</p>
+                <p class="text-md text-gray-500 mt-2">2025/09/25 - 2025/10/07</p>
+            </div>
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-blue-500 pl-4">行程總覽</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-4">旅程核心資訊</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center"><span class="material-icons-sharp text-blue-500 mr-3">calendar_today</span><span><strong>日期:</strong> 2025/09/25 ~ 10/07 (13天12夜)</span></div>
+                        <div class="flex items-center"><span class="material-icons-sharp text-blue-500 mr-3">flight_takeoff</span><span><strong>出發地:</strong> 台中 / 台北 (TPE)</span></div>
+                        <div class="flex items-center"><span class="material-icons-sharp text-blue-500 mr-3">location_on</span><span><strong>目的地:</strong> 西班牙 (巴塞隆納、塞維亞)、葡萄牙 (里斯本、波多)</span></div>
+                        <div class="flex items-center"><span class="material-icons-sharp text-blue-500 mr-3">public</span><span><strong>跨越城市:</strong> 4大城市，體驗多元文化</span></div>
+                        <div class="flex items-center"><span class="material-icons-sharp text-blue-500 mr-3">palette</span><span><strong>風格:</strong> 建築藝術、歷史文化、美食饗宴、城市漫遊</span></div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-4">主要交通時間分析</h3>
+                    <canvas id="travelChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-tickets" class="page-content hidden">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-blue-500 pl-4">我的票券</h2>
+            <div class="space-y-10">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center"><span class="material-icons-outlined mr-2 text-blue-500">flight</span>航班機票</h3>
+                    <div class="bg-white p-6 rounded-lg shadow space-y-3">
+                        <a href="./tickets/Emirates_Taipei_Dubai_Barcelona.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                            <span><strong>去程:</strong> EK387 & EK185 (台北 → 杜拜 → 巴塞隆納)</span>
+                            <span class="material-icons-outlined text-gray-500">open_in_new</span>
+                        </a>
+                        <a href="./tickets/Turkish Airlines_Lisbon_To_Ho Chi Minh City.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                            <span><strong>回程:</strong> TK1760 & TK162 (里斯本 → 伊斯坦堡 → 胡志明市)</span>
+                            <span class="material-icons-outlined text-gray-500">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center"><span class="material-icons-outlined mr-2 text-blue-500">train</span>火車與巴士</h3>
+                    <div class="bg-white p-6 rounded-lg shadow space-y-3">
+                        <a href="./tickets/Omio_Barcelona_To_Seville.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                            <span><strong>火車:</strong> 巴塞隆納 → 塞維亞</span>
+                            <span class="material-icons-outlined text-gray-500">open_in_new</span>
+                        </a>
+                        <a href="./tickets/alsa_Seville_To_Lisbon.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                            <span><strong>巴士:</strong> 塞維亞 → 里斯本</span>
+                            <span class="material-icons-outlined text-gray-500">open_in_new</span>
+                        </a>
+                         <a href="./tickets/Omio_FLiX_Lisbon_Porto_RoundTrip.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                            <span><strong>巴士:</strong> 里斯本 ⇄ 波多 (來回票)</span>
+                            <span class="material-icons-outlined text-gray-500">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+                 <div>
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center"><span class="material-icons-outlined mr-2 text-blue-500">receipt_long</span>其他票券與憑證</h3>
+                     <div class="bg-white p-6 rounded-lg shadow space-y-3">
+                        <a href="./tickets/Hola_Barcelona_Card.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                            <span><strong>交通卡:</strong> Hola Barcelona Card</span>
+                            <span class="material-icons-outlined text-gray-500">open_in_new</span>
+                        </a>
+                        <a href="./tickets/SEVILLA_Locker- ARENAL.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                            <span><strong>置物櫃:</strong> 塞維亞置物櫃憑證</span>
+                            <span class="material-icons-outlined text-gray-500">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center"><span class="material-icons-outlined mr-2 text-blue-500">local_activity</span>景點與活動</h3>
+                    <div class="bg-white p-6 rounded-lg shadow space-y-3">
+                        <p class="font-bold text-gray-700">巴塞隆納</p>
+                        <a href="./tickets/CasaBatllo.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"><span>巴特婁之家門票</span><span class="material-icons-outlined text-gray-500">open_in_new</span></a>
+                        <a href="./tickets/Park Güell.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"><span>奎爾公園門票</span><span class="material-icons-outlined text-gray-500">open_in_new</span></a>
+                        <a href="./tickets/SagradaFamilia.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"><span>聖家堂門票</span><span class="material-icons-outlined text-gray-500">open_in_new</span></a>
+                        <hr class="my-2">
+                        <p class="font-bold text-gray-700">塞維亞</p>
+                        <a href="./tickets/Tablao Flamenco Las Setas.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"><span>Tablao Flamenco Las Setas表演</span><span class="material-icons-outlined text-gray-500">open_in_new</span></a>
+                        <a href="./tickets/Real Alcázar de Sevilla.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"><span>塞維亞王宮門票</span><span class="material-icons-outlined text-gray-500">open_in_new</span></a>
+                        <a href="./tickets/Catedral de Sevilla.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"><span>塞維亞大教堂與吉拉達塔門票</span><span class="material-icons-outlined text-gray-500">open_in_new</span></a>
+                        <a href="./tickets/RealMaestranzaDeSevilla.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"><span>塞維亞鬥牛場門票</span><span class="material-icons-outlined text-gray-500">open_in_new</span></a>
+                        <hr class="my-2">
+                        <p class="font-bold text-gray-700">辛特拉</p>
+                        <a href="./tickets/ParquesSintra.pdf" target="_blank" class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-100 transition-colors"><span>佩納宮門票</span><span class="material-icons-outlined text-gray-500">open_in_new</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-transport" class="page-content hidden">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-blue-500 pl-4">交通住宿</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center"><span class="material-icons-sharp mr-2 text-blue-500">flight_takeoff</span>航班與火車</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-semibold">去程機票</p>
+                            <p class="text-sm text-gray-600">EK387: 9/25 00:30 TPE → 05:15 DXB</p>
+                            <p class="text-sm text-gray-600">EK185: 9/25 08:15 DXB → 13:25 BCN</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">西班牙內陸火車</p>
+                            <p class="text-sm text-gray-600">iryo 06014: 9/28 13:45 BCN → 19:47 SEV (6h 02m)</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">跨國巴士</p>
+                            <p class="text-sm text-gray-600">10/1 08:00 SEV → 13:14 LIS</p>
+                        </div>
+                         <div>
+                            <p class="font-semibold">葡萄牙內陸巴士</p>
+                            <p class="text-sm text-gray-600">10/4, 10/6: 里斯本 ⇄ 波多 (來回)</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">回程機票</p>
+                            <p class="text-sm text-gray-600">TK1760: 10/7 16:45 LIS → 23:30 IST</p>
+                            <p class="text-sm text-gray-600">TK162: 10/8 02:05 IST → 16:10 SGN</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center"><span class="material-icons-sharp mr-2 text-blue-500">hotel</span>住宿資訊</h3>
+                    <ul class="space-y-3">
+                        <li><strong>N1-3 (巴塞隆納):</strong> <a href="https://www.google.com/maps/search/?api=1&query=Yeah+Barcelona+Hostel" target="_blank" class="text-blue-600 hover:underline">Yeah Barcelona Hostel</a></li>
+                        <li><strong>N4 (塞維亞):</strong> <a href="https://www.google.com/maps/search/?api=1&query=Sevilla+deluxe+suites" target="_blank" class="text-blue-600 hover:underline">Sevilla deluxe suites</a></li>
+                        <li><strong>N5-6 (塞維亞):</strong> <a href="https://maps.app.goo.gl/z3CMmuxASffXjAy89" target="_blank" class="text-blue-600 hover:underline">Sleepin Sevilla</a></li>
+                        <li><strong>N7-9 (里斯本):</strong> <a href="https://www.google.com/maps/search/?api=1&query=Yes+Lisbon+Hostel" target="_blank" class="text-blue-600 hover:underline">Yes Lisbon Hostel</a></li>
+                        <li><strong>N10-11 (波多):</strong> <a href="https://maps.app.goo.gl/tKsKAys6riyhveZG6?g_st=com.google.maps.preview.copy" target="_blank" class="text-blue-600 hover:underline">Oporto Coliseum Studio</a></li>
+                        <li><strong>N12 (里斯本):</strong> <a href="https://www.google.com/maps/search/?api=1&query=Vila+Nova+Guesthouse+Lisbon" target="_blank" class="text-blue-600 hover:underline">Vila Nova Guesthouse</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="page-daily-itinerary" class="page-content hidden">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-blue-500 pl-4">每日行程</h2>
+            
+            <div id="day-selector" class="flex flex-wrap items-center gap-2 mb-8">
+                <button class="day-link px-3 py-2 text-sm font-medium rounded-lg" data-day-target="day-1-content">Day 1</button>
+                <button class="day-link px-3 py-2 text-sm font-medium rounded-lg" data-day-target="day-2-content">Day 2</button>
+                <button class="day-link px-3 py-2 text-sm font-medium rounded-lg" data-day-target="day-3-content">Day 3</button>
+                <button class="day-link px-3 py-2 text-sm font-medium rounded-lg" data-day-target="day-4-content">Day 4</button>
+                <button class="day-link px-3 py-2 text-sm font-medium rounded-lg" data-day-target="day-5-content">Day 5</button>
+                <button class="day-link px-3 py-2 text-sm font-medium rounded-lg" data-day-target="day-6-content">Day 6</button>
+                <button class="day-link px-3 py-2 text-sm font-medium rounded-lg" data-day-target="day-7-content">Day 7</button>
+                <button class="day-link px-3 py-2 text-sm font-medium rounded-lg" data-day-target="day-8-content">Day 8</button>
+                <button class="day-link px-3 py-2 text-sm font-medium rounded-lg" data-day-target="day-9-content">Day 9</button>
+                <button class="day-link px-3 py-2 text-sm font-medium rounded-lg" data-day-target="day-10-content">Day 10</button>
+                <button class="day-link px-3 py-2 text-sm font-medium rounded-lg" data-day-target="day-11-content">Day 11</button>
+                <button class="day-link px-3 py-2 text-sm font-medium rounded-lg" data-day-target="day-12-content">Day 12</button>
+                <button class="day-link px-3 py-2 text-sm font-medium rounded-lg" data-day-target="day-13-content">Day 13</button>
+             </div>
+
+            <div id="day-content-container">
+                <div id="day-1-content" class="day-content">
+                    <h3 class="text-2xl font-semibold mb-6"><span class="bg-blue-500 text-white rounded-full px-3 py-1 mr-3">Day 1</span> 9/25 (四): 巴塞隆納初見・高第與魔幻之夜</h3>
+                    <div class="relative pl-8">
+                        </div>
+                </div>
+                <div id="day-2-content" class="day-content hidden">
+                    <h3 class="text-2xl font-semibold mb-6"><span class="bg-blue-500 text-white rounded-full px-3 py-1 mr-3">Day 2</span> 9/26 (五): 高第巡禮・從魔幻建築到地中海日落</h3>
+                    <div class="relative pl-8">
+                        </div>
+                </div>
+                <div id="day-3-content" class="day-content hidden">
+                    <h3 class="text-2xl font-semibold mb-6"><span class="bg-blue-500 text-white rounded-full px-3 py-1 mr-3">Day 3</span> 9/27 (六): 哥特區深度漫遊・美食與購物狂歡</h3>
+                    <div class="relative pl-8">
+                        </div>
+                </div>
+                <div id="day-4-content" class="day-content hidden">
+                    <h3 class="text-2xl font-semibold mb-6"><span class="bg-blue-500 text-white rounded-full px-3 py-1 mr-3">Day 4</span> 9/28 (日): 再會巴塞隆納・前進熱情塞維亞</h3>
+                    <div class="relative pl-8">
+                        </div>
+                </div>
+                <div id="day-5-content" class="day-content hidden">
+                     <h3 class="text-2xl font-semibold mb-6"><span class="bg-blue-500 text-white rounded-full px-3 py-1 mr-3">Day 5</span> 9/29 (一): 塞維亞王宮與大教堂・歷史的迴響</h3>
+                    <div class="relative pl-8">
+                        </div>
+                </div>
+                <div id="day-6-content" class="day-content hidden">
+                    <h3 class="text-2xl font-semibold mb-6"><span class="bg-blue-500 text-white rounded-full px-3 py-1 mr-3">Day 6</span> 9/30 (二): 鬥牛文化與特里亞納區探索</h3>
+                    <div class="relative pl-8">
+                        </div>
+                </div>
+                <div id="day-7-content" class="day-content hidden">
+                     <h3 class="text-2xl font-semibold mb-6"><span class="bg-blue-500 text-white rounded-full px-3 py-1 mr-3">Day 7</span> 10/1 (三): 跨越邊境・里斯本的電車與夜色</h3>
+                    <div class="relative pl-8">
+                        </div>
+                </div>
+                <div id="day-8-content" class="day-content hidden">
+                    <h3 class="text-2xl font-semibold mb-6"><span class="bg-blue-500 text-white rounded-full px-3 py-1 mr-3">Day 8</span> 10/2 (四): 貝倫區的大航海榮光・日落遊船派對</h3>
+                    <div class="relative pl-8">
+                        </div>
+                </div>
+                <div id="day-9-content" class="day-content hidden">
+                    <h3 class="text-2xl font-semibold mb-6"><span class="bg-blue-500 text-white rounded-full px-3 py-1 mr-3">Day 9</span> 10/3 (五): 辛特拉童話一日遊</h3>
+                    <div class="relative pl-8">
+                        </div>
+                </div>
+                <div id="day-10-content" class="day-content hidden">
+                     <h3 class="text-2xl font-semibold mb-6"><span class="bg-blue-500 text-white rounded-full px-3 py-1 mr-3">Day 10</span> 10/4 (六): 再會里斯本・波多河岸的微醺</h3>
+                    <div class="relative pl-8">
+                        </div>
+                </div>
+                <div id="day-11-content" class="day-content hidden">
+                    <h3 class="text-2xl font-semibold mb-6"><span class="bg-blue-500 text-white rounded-full px-3 py-1 mr-3">Day 11</span> 10/5 (日): 波多經典一日・魔幻書店與Fado之夜</h3>
+                    <div class="relative pl-8">
+                        </div>
+                </div>
+                <div id="day-12-content" class="day-content hidden">
+                     <h3 class="text-2xl font-semibold mb-6"><span class="bg-blue-500 text-white rounded-full px-3 py-1 mr-3">Day 12</span> 10/6 (一): 波多最後巡禮・返回里斯本</h3>
+                    <div class="relative pl-8">
+                        </div>
+                </div>
+                <div id="day-13-content" class="day-content hidden">
+                     <h3 class="text-2xl font-semibold mb-6"><span class="bg-blue-500 text-white rounded-full px-3 py-1 mr-3">Day 13</span> 10/7 (二): 滿載而歸</h3>
+                    <div class="relative pl-8">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-food-guide" class="page-content hidden">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-blue-500 pl-4">美食地圖</h2>
+            <div class="mb-6 flex flex-wrap gap-2">
+                <button class="food-filter-btn active-filter bg-blue-500 text-white px-4 py-2 rounded-full" data-category="all">全部</button>
+                <button class="food-filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full" data-category="tapas">Tapas小吃</button>
+                <button class="food-filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full" data-category="seafood">海鮮</button>
+                <button class="food-filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full" data-category="main">主食</button>
+                <button class="food-filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full" data-category="dessert">甜點咖啡</button>
+                <button class="food-filter-btn bg-gray-200 text-gray-700 px-4 py-2 rounded-full" data-category="bar">酒吧</button>
+            </div>
+            <div id="food-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </section>
+
+        <section id="page-shopping-guide" class="page-content hidden">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-blue-500 pl-4">必買紀念品</h2>
+            <div class="space-y-10">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center"><span class="material-icons-outlined mr-2 text-blue-500">place</span>巴塞隆納</h3>
+                    <ul class="list-disc list-inside bg-white p-6 rounded-lg shadow space-y-2">
+                        <li><strong>高第建築周邊：</strong>在聖家堂、奎爾公園等景點的紀念品店，尋找以馬賽克磁磚為靈感的玻璃冰箱貼、杯墊、筆記本。</li>
+                        <li><strong>Biba Shops 包包：</strong>以其柔軟的皮革和實用設計聞名，是西班牙本土品牌。</li>
+                        <li><strong>Re-Cuir 牛皮包包：</strong>位於哥特區的老店，提供各式手工皮件，品質優良。</li>
+                        <li><strong>La Chinata 橄欖油製品：</strong>除了特級初榨橄欖油，其護手霜、護唇膏、防曬乳也因天然滋潤而大受歡迎。</li>
+                        <li><strong>時尚品牌：</strong>Zara, Bershka, Mango 等西班牙快時尚品牌價格比台灣更優惠，款式也較新。</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center"><span class="material-icons-outlined mr-2 text-blue-500">place</span>塞維亞</h3>
+                    <ul class="list-disc list-inside bg-white p-6 rounded-lg shadow space-y-2">
+                        <li><strong>彩繪陶瓷 (Ceramics)：</strong>特里亞納區是陶瓷重鎮，可以找到美麗的手繪盤子、磁磚和各種裝飾品。</li>
+                        <li><strong>佛朗明哥舞裙與響板：</strong>如果對佛朗明哥感興趣，可以購買相關服飾或樂器作為紀念。</li>
+                        <li><strong>扇子 (Abanico)：</strong>不僅是美麗的工藝品，在安達盧西亞炎熱的天氣裡也非常實用。</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center"><span class="material-icons-outlined mr-2 text-blue-500">place</span>里斯本</h3>
+                    <ul class="list-disc list-inside bg-white p-6 rounded-lg shadow space-y-2">
+                        <li><strong>罐頭沙丁魚：</strong>包裝設計復古精美，本身也是一道美味。許多店家提供印有出生年份的罐頭，是獨特的伴手禮。</li>
+                        <li><strong>軟木塞製品 (Cork)：</strong>葡萄牙是世界上最大的軟木生產國。可以找到軟木製作的皮夾、包包、帽子甚至明信片，輕便又環保。</li>
+                        <li><strong>藍白磁磚 (Azulejo)：</strong>從單片磁磚到杯墊、鍋墊等，是葡萄牙最具代表性的紀念品。</li>
+                        <li><strong>公雞圖案商品：</strong>花公雞 (Galo de Barcelos) 是葡萄牙的國家象徵，代表好運和公正。</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 flex items-center"><span class="material-icons-outlined mr-2 text-blue-500">place</span>波多</h3>
+                    <ul class="list-disc list-inside bg-white p-6 rounded-lg shadow space-y-2">
+                        <li><strong>波特酒 (Port Wine)：</strong>來到波多，絕對不能錯過購買國酒。在加亞新城的各大酒莊都可以品嚐和購買。</li>
+                        <li><strong>萊羅書店周邊：</strong>書店內外都有販售與《哈利波特》和書店本身相關的書籍與紀念品。</li>
+                        <li><strong>傳統手工皂：</strong>例如 Claus Porto 品牌，包裝典雅，香味獨特，是送禮自用兩相宜的選擇。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-preparation" class="page-content hidden">
+            <h2 class="text-3xl font-bold mb-8 border-l-4 border-blue-500 pl-4">行前準備清單</h2>
+            <div class="bg-white p-6 rounded-lg shadow">
+                 <div id="checklist" class="space-y-4"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-6 mt-16">
+        <p>© 2025 為您專屬客製的伊比利半島之旅。祝旅途愉快！</p>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const allNavLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+        const pages = document.querySelectorAll('.page-content');
+
+        function switchPage(targetId) {
+            pages.forEach(page => page.classList.add('hidden'));
+            const targetPage = document.getElementById(targetId);
+            if (targetPage) targetPage.classList.remove('hidden');
+
+            allNavLinks.forEach(link => {
+                link.classList.toggle('active', link.dataset.target === targetId);
+            });
+            window.scrollTo(0, 0);
+        }
+
+        allNavLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                switchPage(this.dataset.target);
+                if (!mobileMenu.classList.contains('hidden')) {
+                   mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        const ctx = document.getElementById('travelChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['TPE-BCN (飛行)', 'BCN-SEV (火車)', 'SEV-LIS (巴士)', 'LIS-OPO (火車)', 'OPO-LIS (火車)', 'LIS-TPE (飛行)'],
+                datasets: [{
+                    label: '交通時間 (小時)',
+                    data: [18.9, 6, 5.2, 3.2, 3.2, 19.5],
+                    backgroundColor: ['rgba(59, 130, 246, 0.6)', 'rgba(239, 68, 68, 0.6)', 'rgba(249, 115, 22, 0.6)', 'rgba(16, 185, 129, 0.6)', 'rgba(16, 185, 129, 0.6)', 'rgba(59, 130, 246, 0.6)'],
+                    borderColor: ['rgba(59, 130, 246, 1)', 'rgba(239, 68, 68, 1)', 'rgba(249, 115, 22, 1)', 'rgba(16, 185, 129, 1)', 'rgba(16, 185, 129, 1)', 'rgba(59, 130, 246, 1)'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: { y: { beginAtZero: true } },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { label: context => `${context.dataset.label || ''}: ${context.parsed.y} 小時` } }
+                }
+            }
+        });
+        
+        const foodData = [
+            { name: 'Vinitus (烤竹蟶/海鮮串)', desc: '巴塞隆納超人氣Tapas名店，海鮮極度新鮮，價格實惠。', category: 'seafood', map: 'https://www.google.com/maps/search/?api=1&query=Vinitus+Barcelona' },
+            { name: 'Granja M. Viader (吉拿棒)', desc: '巴塞隆納百年老店，品嚐最傳統的吉拿棒 (Churros) 佐濃郁熱巧克力。', category: 'dessert', map: 'https://www.google.com/maps/search/?api=1&query=Granja+M.+Viader' },
+            { name: 'Arroz Negro (墨魚飯)', desc: '西班牙特色料理，用墨魚汁燴煮的米飯，搭配大蒜美乃滋 (Aioli) 風味絕佳。', category: 'main', map: 'https://www.google.com/maps/search/?api=1&query=Arroz+negro+restaurant+barcelona' },
+            { name: 'Paradiso (隱藏酒吧)', desc: '巴塞隆納世界級酒吧，藏身於一間熟食店之後，以其創意調酒聞名。', category: 'bar', map: 'https://www.google.com/maps/search/?api=1&query=Paradiso+Barcelona' },
+            { name: 'Tapas (綜合)', desc: '西班牙國粹。必試：辣醬馬鈴薯 (Patatas bravas)、炸丸子 (Croquetas)、番茄麵包 (Pan con tomate)、炸小青椒 (Pimientos de Padrón)。', category: 'tapas', map: 'https://www.google.com/maps/search/?api=1&query=best+tapas+barcelona' },
+            { name: 'Jamón Ibérico (伊比利火腿)', desc: '世界頂級生火腿，油花豐潤，入口即化，搭配一杯紅酒是絕配。', category: 'tapas', map: 'https://www.google.com/maps/search/?api=1&query=jamon+iberico+shop+spain' },
+            { name: 'Pastéis de Belém (百年蛋塔)', desc: '里斯本貝倫區的蛋塔創始店，塔皮酥脆，內餡香濃滑順，灑上肉桂粉更添風味。', category: 'dessert', map: 'https://www.google.com/maps/search/?api=1&query=Pastéis+de+Belém' },
+            { name: 'Time Out Market Lisboa', desc: '里斯本美食廣場，集結各路名店，從海鮮、牛排到甜點應有盡有，是美食愛好者的天堂。', category: 'main', map: 'https://www.google.com/maps/search/?api=1&query=Time+Out+Market+Lisboa' },
+            { name: 'Bifana (豬扒包)', desc: '葡萄牙國民美食，用大蒜和白酒醃製的豬肉片夾在麵包裡，簡單卻美味無比。', category: 'tapas', map: 'https://www.google.com/maps/search/?api=1&query=bifana+lisbon' },
+            { name: 'Francesinha (濕答答三明治)', desc: '波多的招牌料理，麵包夾著滿滿的肉類，外層覆蓋起司，再淋上特製的啤酒醬汁，熱量爆表但極度滿足。', category: 'main', map: 'https://www.google.com/maps/search/?api=1&query=francesinha+porto' },
+            { name: 'Majestic Café', desc: '波多百年歷史的華麗咖啡館，被譽為世界最美咖啡館之一，適合享受悠閒的下午茶時光。', category: 'dessert', map: 'https://www.google.com/maps/search/?api=1&query=Majestic+Café' },
+            { name: 'Sangria / Clara', desc: 'Sangria 是西班牙代表性的水果酒。Clara 則是啤酒加檸檬汽水，清爽解渴，適合炎熱天氣。', category: 'bar', map: 'https://www.google.com/maps/search/?api=1&query=sangria+bar' }
+        ];
+
+        const foodGrid = document.getElementById('food-grid');
+        const filterButtons = document.querySelectorAll('.food-filter-btn');
+
+        function renderFoodItems(filter = 'all') {
+            foodGrid.innerHTML = '';
+            const filteredData = (filter === 'all') ? foodData : foodData.filter(item => item.category === filter);
+            
+            filteredData.forEach(item => {
+                const card = `
+                    <div class="bg-white rounded-lg shadow overflow-hidden transform hover:-translate-y-1 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="font-bold text-lg mb-2">${item.name}</h3>
+                            <p class="text-gray-600 text-sm mb-4">${item.desc}</p>
+                            <a href="${item.map}" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold text-sm inline-flex items-center">
+                                在地圖上尋找 <span class="material-icons-sharp text-sm ml-1">open_in_new</span>
+                            </a>
+                        </div>
+                    </div>`;
+                foodGrid.innerHTML += card;
+            });
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active-filter', 'bg-blue-500', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                button.classList.add('active-filter', 'bg-blue-500', 'text-white');
+                button.classList.remove('bg-gray-200', 'text-gray-700');
+                renderFoodItems(button.dataset.category);
+            });
+        });
+
+        const checklistData = [
+            { category: '重要文件', items: ['護照 (確認效期6個月以上)', '機票/火車票/住宿憑證 (電子檔&紙本備份)', '景點門票 (電子檔&紙本備份)', '申根旅遊保險證明'] },
+            { category: '金錢與支付', items: ['歐元現鈔', '信用卡 (至少2張 Visa/Mastercard)', '海外提款卡 (確認開啟跨國提款)'] },
+            { category: '衣物與配件', items: ['舒適好走的鞋子 (最重要!)', '防風防水薄外套', '短袖/長袖上衣 (洋蔥式穿搭)', '長褲', '襪子與貼身衣物', '太陽眼鏡', '遮陽帽/扇子'] },
+            { category: '電子產品', items: ['手機與充電線', '相機與充電器/備用電池', '行動電源', '歐洲規格雙圓孔轉接頭'] },
+            { category: '個人用品', items: ['個人常備藥品 (胃藥/止痛藥/暈車藥)', '盥洗用品 (牙刷/牙膏)', '保養品/化妝品', '防曬乳', '衛生紙/濕紙巾'] },
+            { category: '其他', items: ['預先購買歐洲 SIM 卡或租借 Wi-Fi 機', '下載離線地圖 (Google Maps)', '防盜包/貼身腰包', '空水瓶', '筆記本與筆'] }
+        ];
+
+        const checklistContainer = document.getElementById('checklist');
+        
+        checklistData.forEach(category => {
+            let categoryHtml = `<div class="mb-6"><h3 class="text-xl font-semibold mb-3 text-gray-700">${category.category}</h3><div class="space-y-2">`;
+            category.items.forEach((item, index) => {
+                const itemId = `${category.category.replace(/\s+/g, '-')}-${index}`;
+                categoryHtml += `
+                    <label for="${itemId}" class="checklist-item flex items-center p-2 rounded-md hover:bg-gray-100 cursor-pointer">
+                        <input type="checkbox" id="${itemId}" class="h-5 w-5 rounded border-gray-300 text-blue-600 focus:ring-blue-500 mr-3">
+                        <span class="text-gray-800 transition-colors">${item}</span>
+                    </label>
+                `;
+            });
+            categoryHtml += `</div></div>`;
+            checklistContainer.innerHTML += categoryHtml;
+        });
+
+        // --- Initial Load ---
+        switchPage('page-overview');
+        renderFoodItems();
+    });
+    </script>
+</body>
+
+</html>
